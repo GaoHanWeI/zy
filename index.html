@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html ng-app='app'>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" type="text/css" href="fonts/css/font-awesome.min.css"/>
+		<link rel="stylesheet" href="fonts/css/font-awesome.min.css" />
+	</head>
+	<body>
+		<header>
+			<div class="head">
+				<span class="user"><img src="img/user.png" alt="" /></span>
+				<a href="#"> kinson <span class="fa fa-caret-down" style="color: #959595;"></span></a>
+			</div>
+		</header>
+			<div class="box">
+				<div class="con">
+					<div class="conLeft" id='conLeft'>
+						<div class="conClick">
+							<a href="#">
+							<span><i class="fa fa-lg fa-home"></i></span>
+							店铺管理
+							<span class="fa fa-lg fa-angle-down ri"></span>
+							</a>
+						</div>
+							<ul>
+								<li><a href="#/commodity">商户信息</a></li>
+								<li><a href="#/production">商家作品</a></li>
+								<li><a href="">套系管理</a></li>
+							</ul>
+						<div  class="conClick">
+							<a href="#">
+							<span><i class="fa fa-lg fa-home"></i></span>
+							服务管理
+							<span class="fa fa-lg fa-angle-down ri"></span>
+							
+							</a>
+						</div>
+						<ul>
+								<li><a href="#/all">所有订单</a></li>
+								<li><a href="">摄影未排期</a></li>
+								<li><a href="">试衣排期</a></li>
+								<li><a href="">选片排期</a></li>
+								<li><a href="">定稿排期</a></li>
+								<li><a href="">取件排期</a></li>
+								<li><a href="">待取件排期</a></li>
+								<li><a href="">已完成订单</a></li>
+								<li><a href="#/chargeback">已退单</a></li>
+								<li><a href="#/Backup">数据备份</a></li>
+							</ul>
+						<div>
+							<a href="#/manage">
+							<span><i class="fa fa-lg fa-home"></i></span>				
+							
+							客片管理
+							</a>
+						</div>
+						<div  class="conClick">
+							<a href="#">
+							<span><i class="fa fa-lg fa-home"></i></span>
+							档期管理
+							<span class="fa fa-lg fa-angle-down ri"></span>
+							
+							</a>
+						</div>
+						<ul>
+								<li><a href="#/look">档期一览</a></li>
+								<li><a href="#/detail">档期明细</a></li>
+							</ul>
+						<div>
+							<a href="#">
+							<span><i class="fa fa-lg fa-home"></i></span>
+							分享统计
+							</a>
+						</div>
+						<div>
+							<a href="#/dive">
+							<span><i class="fa fa-lg fa-home"></i></span>
+							潜客管理
+							</a>
+						</div>
+						<div  class="conClick">
+							<a href="#">
+							<span><i class="fa fa-lg fa-home"></i></span>
+							系统设置
+							<span class="fa fa-lg fa-angle-down ri"></span>
+							
+							</a>
+						</div>
+						<ul>
+								<li><a href="#/user">用户管理</a></li>
+								<li><a href="">部门&人员</a></li>
+								<li><a href="">服务设置</a></li>
+								<li><a href="">订单来源设置</a></li>
+								<li><a href="">分享设置</a></li>
+								<li><a href="">拍摄档期分类</a></li>
+								<li><a href="">个人信息</a></li>
+							</ul>
+					</div>
+					<div class="conRight">
+                        <ng-view></ng-view>
+					</div>
+					
+				</div>
+
+			</div>
+        <p style="text-align: center;font-size: 12px;background: #F5F5F5;padding-top: 60px;">上海杜梅投资管理中心</p>
+	</body>
+	<script src="js/angular/angular.js"></script>
+     <script src="js/angular/angular-route.min.js"></script>
+	<script src="js/jquery版本/jquery-3.1.1.js"></script>
+
+	<script>
+
+	    //左侧点击显示隐藏
+	     var falg=true;
+		$(".conClick").click(function(){
+			if(falg){		        
+                $(this).find('.ri').removeClass(" fa fa-lg fa-angle-down")
+                $(this).find('.ri').addClass("ri fa fa-lg fa-angle-up")
+				$(this).next('ul').css('display','block')
+				 falg=false
+			}else{
+				 $(this).find('.ri').removeClass(" fa fa-lg fa-angle-up")
+                $(this).find('.ri').addClass("ri fa fa-lg fa-angle-down")
+                 $(this).next('ul').css('display','none')
+				 falg=true
+			}
+		})
+
+         $("#conLeft>div").click(function(){
+         	  $("#conLeft>div").removeClass('bg')
+         	  $("#conLeft>ul>li").removeClass('bg')
+          	  $(this).addClass('bg')
+         })
+         $("#conLeft>ul>li").click(function(){
+         	  $("#conLeft>div").removeClass('bg')
+         	  $("#conLeft>ul>li").removeClass('bg')        	
+         	  $(this).addClass('bg')
+         	
+         })
+		var app=angular.module('app',['ngRoute']);
+		app.config(['$routeProvider',function($routeProvider){
+			$routeProvider
+			.when('/commodity',{templateUrl:'home/commodity.html'})
+			.when('/production',{templateUrl:'home/production.html'})
+			.when('/all',{templateUrl:'home/all.html'})
+			.when('/user',{templateUrl:'home/user.html'})
+			.when('/look',{templateUrl:'home/look.html'})
+			.when('/Backup',{templateUrl:'home/Backup.html'})
+			.when('/manage',{templateUrl:'home/manage.html'})
+			.when('/dive',{templateUrl:'home/dive.html'})
+			.when('/detail',{templateUrl:'home/detail.html'})
+			.when('/chargeback',{templateUrl:'home/chargeback.html'})
+			
+			
+			
+		}])
+	</script>
+</html>
