@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+.rightCon {
+  width: 100%;
+  height: 100%;
+}
+
+.rightTop {
+  height: 54px;
+  border-bottom: 1px solid #F4F4F4;
+  line-height: 54px;
+  padding-left: 24px;
+  color: #696969;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+table tr td {
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+table tr td:first-child {
+  width: 93px;
+  padding-left: 10px;
+  font-size: 12px;
+}
+
+table tr .btn > button {
+  width: 70px;
+  height: 30px;
+  border-radius: 5px;
+  margin-right: 10px;
+  background-color: #FFFFFF;
+  border: 1px solid #EFEFEF;
+  color: #909090;
+}
+
+table tr .btn > button:first-child {
+  background-color: #FF6477;
+  color: white;
+  border: none;
+}
+
+input[type=text], select {
+  width: 106px;
+  height: 30px;
+  padding-left: 10px;
+}
+
+.name {
+  width: 90px;
+  height: 30px;
+}
+
+.tel {
+  width: 140px;
+  height: 30px;
+}
+
+.birthday {
+  width: 85px;
+  height: 30px;
+}
+
+.number {
+  width: 120px;
+  height: 30px;
+}
+
+.significance {
+  color: red;
+}
+
+.type > span {
+  display: inline-block;
+  margin-right: 15px;
+}

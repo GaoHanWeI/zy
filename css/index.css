@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+header {
+  width: 1366px;
+  padding: 0 255px;
+  height: 45px;
+  background: white;
+  border-bottom: 1px solid #F2F2F2;
+}
+
+.head, .conLeft > div > a {
+  position: relative;
+}
+
+.head .user, .conLeft > div > a > span:nth-child(1), .conLeft > div > a > span:nth-child(2) {
+  position: absolute;
+}
+
+.head {
+  width: 100%;
+  height: 100%;
+  background: url(../img/logo.png) no-repeat 0 50%;
+  background-size: 60px 25px;
+  text-align: end;
+  font-size: 14px;
+  padding: 14px 0;
+}
+
+.head .user {
+  width: 15px;
+  height: 16px;
+  top: 50%;
+  right: 65px;
+  margin-top: -8px;
+}
+
+.head .user > img {
+  width: 100%;
+  height: 100%;
+}
+
+.head > a {
+  color: #686868;
+}
+
+.box {
+  width: 1366px;
+  height: 685px;
+  padding: 22px 255px 0 255px;
+  box-sizing: border-box;
+  background: #F5F5F5;
+}
+
+.box .con {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: white;
+}
+
+.conLeft {
+  width: 170px;
+  height: 100%;
+  background: #FFFFFF;
+  padding-top: 10px;
+}
+
+.conLeft > div:hover {
+  background-color: #FF6577 !important;
+}
+
+.conLeft > div:hover > a {
+  color: white;
+}
+
+.conLeft > ul {
+  display: none;
+}
+
+.conLeft > ul > li {
+  padding: 6px 0 6px 50px;
+  font-size: 10px;
+}
+
+.conLeft > ul > li > a {
+  color: black;
+}
+
+.conLeft > ul > li:hover {
+  background-color: #FF6577 !important;
+}
+
+.conLeft > ul > li:hover > a {
+  color: white;
+}
+
+.conLeft > div > a {
+  display: block;
+  color: black;
+  height: 40px;
+  width: 100%;
+  padding: 11px 0 11px 50px;
+  font-size: 12px;
+}
+
+.conLeft > div > a > span:nth-child(1) {
+  width: 18px;
+  height: 18px;
+  left: 20px;
+  top: 50%;
+  margin-top: -9px;
+}
+
+.conLeft > div > a > span:nth-child(1) > img {
+  width: 100%;
+  height: 100%;
+}
+
+.conLeft > div > a > span:nth-child(2) {
+  right: 20px;
+  top: 50%;
+  margin-top: -7px;
+}
+
+.conLeft .bg {
+  background-color: #FF6577 !important;
+}
+
+.conLeft .bg > a {
+  color: white !important;
+}
+
+.conRight {
+  -webkit-flex: 1;
+}
